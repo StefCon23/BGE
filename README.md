@@ -12,6 +12,8 @@ Plan pictures:
 ![Side View](https://raw.githubusercontent.com/ConorStefanini/BGE/Assignment/Logo/sideView.jpg)
 ![Front View](https://raw.githubusercontent.com/ConorStefanini/BGE/Assignment/Logo/frontView.jpg)
 ![Top Down](https://raw.githubusercontent.com/ConorStefanini/BGE/Assignment/Logo/topDown.jpg)
+![Isometric](https://raw.githubusercontent.com/ConorStefanini/BGE/Assignment/Logo/isometric.jpg)
+![Possible Final](https://raw.githubusercontent.com/ConorStefanini/BGE/Assignment/Logo/possibleFinal.jpg)
 
 
 A wall of boxes generated in BGE:
