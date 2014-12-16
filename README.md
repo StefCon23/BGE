@@ -1,22 +1,23 @@
 Conor Stefanini
 C11443118
 
-I plan to make a model of a seagull that walks on its legs.
-The connection between the neck and the body will be a ball and socket joint.
-The legs will be hinge joints that move forwards and backwards.
-The powersource will be in each of the seagulls feet.
+I have made an animat of a bird (seagull) that flaps its wings.
 
-This is a simplified model of what I hope to accomplish.
+The head and the body are spheres
+The body has a radius of 5 and the head has a radius of 3.33.
+The connection between the head and the body is a fixed constraint.
 
-Plan pictures:
-![Side View](https://raw.githubusercontent.com/ConorStefanini/BGE/Assignment/Logo/sideView.jpg)
-![Front View](https://raw.githubusercontent.com/ConorStefanini/BGE/Assignment/Logo/frontView.jpg)
-![Top Down](https://raw.githubusercontent.com/ConorStefanini/BGE/Assignment/Logo/topDown.jpg)
-![Isometric](https://raw.githubusercontent.com/ConorStefanini/BGE/Assignment/Logo/isometric.jpg)
-![Possible Final](https://raw.githubusercontent.com/ConorStefanini/BGE/Assignment/Logo/possibleFinal.jpg)
+The legs are cylinders with a radius of 0.5 and a length of 3.33.
+The legs are connected to the body by fixed constraints.
 
+The shoulders are cylinders with a radius of about 1.03 and a length of 1.
+The powersource is in the seagull's shoulders which the wings are connected to with hinge joints.
 
-A wall of boxes generated in BGE:
+The shoulders are connected to the body with hinge constraints.
+The shoulders don't rotate from the perspective of the body and rotate about the y axis of the cylinders of the shoulders.
+The shoulder cylinders are rotated 90 degrees about the world's x axis, this means the the rotation about the cylinders y axis results in a rotation about the world's z axis.
 
-![Box Wall](https://raw.githubusercontent.com/ConorStefanini/BGE/Assignment/Logo/generatedWall.jpg)
+The wings are connected to the edge of the shoulders by a hinge constraint that rotates about the world's z axis of both the shoulder and wings.
+
+![Front View](https://raw.githubusercontent.com/ConorStefanini/BGE/Assignment/Logo/roughSeagull.png)
 
