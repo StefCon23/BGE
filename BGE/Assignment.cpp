@@ -99,7 +99,6 @@ shared_ptr<PhysicsController> Assignment::CreateSeagull(glm::vec3 position, floa
 	**	In the later parts I dropped te idea so the model isn't scalable and will not work will values for scale other than 5
 	*/
 
-
 	//	float scale = 5;
 	float head_rad = scale / 1.5;
 	shared_ptr<PhysicsController> head = physicsFactory->CreateSphere(head_rad, position + glm::vec3(0, scale + head_rad, scale), glm::quat());
@@ -130,13 +129,10 @@ shared_ptr<PhysicsController> Assignment::CreateSeagull(glm::vec3 position, floa
 	Game::dynamicsWorld->addConstraint(body_l_shoulder);
 	body_l_shoulder->enableAngularMotor(true, 20, 20);
 
-	
 	shared_ptr<PhysicsController> left_wing_stick = physicsFactory->CreateBox(scale * 2, scale / 10, scale, left_wing_hinge + glm::vec3((scale)+2, 0, scale / 5), glm::quat());
 	btHingeConstraint * l_shoulder_stick = new btHingeConstraint(*left_shoulder->rigidBody, *left_wing_stick->rigidBody, btVector3(shoulder_rad, 0, 0), btVector3(-((scale * 2) - shoulder_rad), 0, 0), btVector3(0, 1, 0), btVector3(0, 0, 1));
 	Game::dynamicsWorld->addConstraint(l_shoulder_stick);
 
-	
-	
 
 	shared_ptr<PhysicsController> right_shoulder = physicsFactory->CreateCylinder(shoulder_rad - 0.5, scale / 5, right_wing_hinge, shoulder_rot);
 	btHingeConstraint * body_r_shoulder = new btHingeConstraint(*body->rigidBody, *right_shoulder->rigidBody, GLToBtVector(glm::vec3(-((scale + shoulder_rad) * (1 / glm::sqrt(2.0))), ((scale + shoulder_rad) * (1 / glm::sqrt(2.0))), 0)), GLToBtVector(glm::vec3(0, 0, 0)), btVector3(0, 0, 0), btVector3(0, 1, 0));
@@ -147,7 +143,6 @@ shared_ptr<PhysicsController> Assignment::CreateSeagull(glm::vec3 position, floa
 	btHingeConstraint * r_shoulder_stick = new btHingeConstraint(*right_shoulder->rigidBody, *right_wing_stick->rigidBody, btVector3(-shoulder_rad, 0, 0), btVector3((scale * 2) - shoulder_rad, 0, 0), btVector3(0, 1, 0), btVector3(0, 0, 1));
 	Game::dynamicsWorld->addConstraint(r_shoulder_stick);
 
-	
 
 
 	/*
@@ -157,7 +152,7 @@ shared_ptr<PhysicsController> Assignment::CreateSeagull(glm::vec3 position, floa
 	float hip_rad = ((scale + (scale / 2) - (head_rad / 2)) - (scale * (glm::sqrt(3.0) / 2))) / 2;
 	shared_ptr<PhysicsController> left_leg = physicsFactory->CreateCylinder((scale / 10), head_rad, position + glm::vec3((scale / 2), -(scale + (scale / 2.5)), 0), glm::quat());
 	shared_ptr<PhysicsController> right_leg = physicsFactory->CreateCylinder((scale / 10), head_rad, position + glm::vec3(-(scale / 2), -(scale + (scale / 2.5)), 0), glm::quat());
-	
+
 	btTransform t3, t4;
 	t3.setIdentity();
 	t4.setIdentity();
@@ -186,7 +181,7 @@ shared_ptr<PhysicsController> Assignment::CreateSeagull2(glm::vec3 position)
 	float head_rad = scale / 1.5;
 	shared_ptr<PhysicsController> head = physicsFactory->CreateSphere(head_rad, position + glm::vec3(0, scale + head_rad, scale), glm::quat());
 	shared_ptr<PhysicsController> body = physicsFactory->CreateSphere(scale, position, glm::quat());
-	
+
 	btTransform t1, t2;
 	t1.setIdentity();
 	t2.setIdentity();
