@@ -19,5 +19,5 @@ The shoulder cylinders are rotated 90 degrees about the world's x axis, this mea
 
 The wings are connected to the edge of the shoulders by a hinge constraint that rotates about the world's z axis of both the shoulder and wings.
 
-![Front View](https://raw.githubusercontent.com/ConorStefanini/BGE/Assignment/Logo/roughSeagull.png)
+![Seagull Body Parts](https://raw.githubusercontent.com/ConorStefanini/BGE/Assignment/Logo/roughSeagull.png)
 
